@@ -1,0 +1,35 @@
+@use "../base/mixins";
+
+.footer {
+    &__phone{
+        @include mixins.flex(column, space-between, flex-start);
+        gap: 8rem;
+
+        width: 170rem;
+        height: 52rem;
+    }
+    &__number {
+        width: 170rem;
+        height: 23rem;
+
+        @include mixins.font('Raleway', 500, 20rem, 23rem);
+
+        color: #2C2D35;
+
+        flex: none;
+        order: 0;
+        flex-grow: 0;
+    }
+    &__line {
+        width: 104rem;
+        height: 21rem;
+
+        @include mixins.font('Raleway', 500, 19rem, 21rem);
+
+        color: #86928B;
+
+        flex: none;
+        order: 1;
+        flex-grow: 0;
+    }
+}

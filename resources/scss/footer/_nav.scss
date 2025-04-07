@@ -1,0 +1,45 @@
+@use "../base/mixins";
+
+.footer {
+    &__nav {
+        @include mixins.flex(row, space-between, flex-start);
+
+        width: 445rem;
+        height: 122rem;
+        &_row {
+            @include mixins.flex(column, none, flex-start);
+            gap: 6rem;
+
+            width: fit-content;
+            height: 122rem;
+
+            flex: none;
+            order: 0;
+            flex-grow: 0;
+        }
+        &_heading {
+            width: fit-content;
+            height: 23rem;
+
+            @include mixins.font('Raleway', 500, 20rem, 23rem);
+
+            color: #2C2D35;
+
+            flex: none;
+            order: 0;
+            flex-grow: 0;
+        }
+        &_el {
+            width: fit-content;
+            height: 27rem;
+
+            @include mixins.font('Raleway', 500, 18rem, 150%);
+
+            color: #86928B;
+
+            flex: none;
+            order: 1;
+            flex-grow: 0;
+        }
+    }
+}

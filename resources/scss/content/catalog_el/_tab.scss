@@ -1,0 +1,29 @@
+@use "../../base/mixins";
+
+.tab {
+    @include mixins.flex(row, center, center);
+    padding: 10rem 20rem;
+
+    width: 126rem;
+    height: 43rem;
+
+    background: #D4E8D9;
+    border-radius: 20rem;
+
+    // flex: none;
+    // order: 0;
+    // flex-grow: 0;
+
+    &__span {
+        width: 86rem;
+        height: 23rem;
+
+        font-family: 'Raleway';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 20rem;
+        line-height: 23rem;
+
+        color: #2C2D35;
+    }
+}

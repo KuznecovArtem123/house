@@ -1,0 +1,8 @@
+@use "../base/mixins";
+
+.span {
+    @include mixins.font('Raleway', 700,  20rem, 23rem);
+    &-green {
+        color: #598D66;
+    }
+}

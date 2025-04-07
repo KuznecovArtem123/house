@@ -1,0 +1,70 @@
+@use "../base/mixins";
+@forward "phone";
+@forward "nav";
+
+.footer {
+    position: relative;
+    width: 1440rem;
+    height: 168rem;
+
+    padding: 23rem 0;
+
+    background: #E1EDE6;
+    @include mixins.flex(row, center, none);
+
+    &__content {
+        @include mixins.flex(row, space-between, none);
+        width: 978rem;
+    }
+    &__info {
+        height: 122rem;
+        width: 170rem;
+        // display: block;
+        @include mixins.flex(column, space-between, none);
+
+    }
+    &__logo {
+        width: 143rem;
+        height: 35rem;
+    }
+    &__copyrights {
+        @include mixins.flex(column, none, flex-start);
+        gap: 10rem;
+
+        width: 132rem;
+        height: 68rem;
+        &_span {
+            gap: 6rem;
+            width: 132rem;
+            height: 34rem;
+
+            @include mixins.font('Raleway', 500, 12rem, 120%);
+
+            color: #86928B;
+
+            flex: none;
+            order: 0;
+            flex-grow: 0;
+        }
+    }
+    &__social {
+        @include mixins.flex(row, none, flex-start);
+        gap: 30rem;
+
+        width: 132rem;
+        height: 24rem;
+
+        flex: none;
+        order: 0;
+        flex-grow: 0;
+        &-icon {
+            width: 24rem;
+            height: 24rem;
+
+            flex: none;
+            order: 0;
+            flex-grow: 0;
+        }
+    }
+
+}

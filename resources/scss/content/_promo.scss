@@ -1,0 +1,72 @@
+@use "../base/mixins";
+
+.promo {
+    position: relative;
+    width: 1440rem;
+    height: 574rem;
+
+    @include mixins.flex(column, center, center);
+
+    &__background {
+        width: 1440rem;
+        position: absolute;
+        z-index: -100;
+    }
+    &__info {
+        width: 540rem;
+        position: relative;
+        right: 300rem;
+        display: flex;
+        gap: 60rem;
+        flex-direction: column;
+    }
+    &__text {
+        display: flex;
+        flex-direction: column;
+        gap: 20rem;
+    }
+    &__star {
+        box-sizing: border-box;
+        width: 80rem;
+        height: 80rem;
+
+        flex: none;
+        order: 0;
+        flex-grow: 0;
+    }
+    &__heading {
+        @include mixins.flex(row, none, center);
+        padding: 0rem;
+        gap: 20rem;
+
+        width: 521rem;
+        height: 80rem;
+        &_span {
+            width: 421rem;
+            height: 80rem;
+            color: #F4F6F5;
+            flex: none;
+            order: 1;
+            flex-grow: 0;
+
+            @include mixins.font('Raleway', 500, 40rem, 100%);
+        }
+    }
+    &__span {
+        position: relative;
+        width: 540rem;
+        height: 209rem;
+
+        @include mixins.font('Raleway', 500, 18rem, 27rem);
+
+        color: #FFFFFF;
+    }
+    &__button {
+        @include mixins.flex(row, center, center);
+        padding: 20rem 60rem;
+
+        width: 257rem;
+        height: 65rem;
+    }
+
+}

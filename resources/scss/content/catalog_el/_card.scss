@@ -1,0 +1,66 @@
+@use "../../base/mixins";
+
+// @include mixins.flex(column, center, center);
+// @include mixins.font('Raleway', 500, 30rem, 35rem);
+.card {
+    padding: 25rem 20rem;
+    width: 350rem;
+    height: 730rem;
+    background: #E1EDE6;
+    // gap: 10rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    // flex: none;
+    // order: 0;
+    // flex-grow: 0;
+
+    // @include mixins.flex(column, flex-start, flex-start);
+    &__info {
+        @include mixins.flex(column, flex-start, flex-start);
+        gap: 10rem;
+
+    }
+    &__buy {
+        @include mixins.flex(column, flex-start, flex-start);
+        gap: 15rem;
+
+    }
+    &__img {
+        height: 422rem;
+
+    }
+    &__author {
+        width: 140rem;
+        height: 21rem;
+        color: #86928B;
+
+        @include mixins.font('Raleway', 500, 18rem, 21rem);
+    }
+    &__name {
+        width: 310rem;
+        height: 35rem;
+        color: #2C2D35;
+
+        @include mixins.font('Raleway', 500, 30rem, 35rem);
+    }
+    &__property {
+        height: 21rem;
+        color: #2C2D35;
+
+        @include mixins.font('Raleway', 500, 18rem, 21rem);
+    }
+    &__cost {
+        width: 127rem;
+        height: 28rem;
+        color: #598D66;
+
+        @include mixins.font('Raleway', 500, 24rem, 28rem);
+    }
+    &__button {
+        align-self: stretch;
+        padding: 20rem 60rem;
+
+    }
+}

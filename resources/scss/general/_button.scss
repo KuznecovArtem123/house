@@ -1,0 +1,25 @@
+@use "../base/mixins";
+.button {
+    box-sizing: border-box;
+
+    @include mixins.flex(row, center, center);
+    gap: 6rem;
+    &__span {
+        @include mixins.font('Raleway', 500,  20rem, 23rem);
+    }
+
+    &-green{
+        border: 1rem solid #598D66;
+        &__span {
+            color: #598D66;
+        }
+    }
+    &-yellow {
+        border: 0;
+        background-color: #EEDB6D;
+        &__span {
+            color: #2C2D35;
+        }
+    }
+}
+

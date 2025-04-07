@@ -1,0 +1,75 @@
+@use "../base/mixins";
+
+.team {
+    @include mixins.flex(row, space-between, flex-end);
+
+    position: relative;
+    width: 1110rem;
+    height: 440rem;
+    left: 165rem;
+    &__picture {
+        position: relative;
+        width: 445rem;
+        height: 440rem;
+    }
+    &__info {
+        @include mixins.flex(column, none, flex-start);
+        gap: 20rem;
+
+        position: relative;
+        width: 635rem;
+        height: 272rem;
+        bottom: 44rem;
+
+    }
+    &__text {
+        @include mixins.flex(column, space-between, none);
+
+        width: 635rem;
+        height: 172rem;
+
+        flex: none;
+        order: 0;
+        flex-grow: 0;
+    }
+    &__heading {
+        position: relative;
+        width: 281rem;
+        height: 44rem;
+
+        @include mixins.font('Raleway', 500, 40rem, 110%);
+
+        color: #2C2D35;
+    }
+    &__span {
+        position: relative;
+        width: 635rem;
+        height: 108rem;
+
+        @include mixins.font('Raleway', 500, 18rem, 150%);
+
+        color: #2C2D35;
+    }
+    &__workers {
+        @include mixins.flex(row, none, flex-start);
+        gap: 30rem;
+
+        width: 300rem;
+        height: 80rem;
+
+        flex: none;
+        order: 1;
+        flex-grow: 0;
+
+        &_el {
+            width: 80rem;
+            height: 80rem;
+
+            flex: none;
+            order: 0;
+            flex-grow: 0;
+
+        }
+    }
+
+}

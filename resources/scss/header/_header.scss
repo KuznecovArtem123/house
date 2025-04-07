@@ -1,0 +1,74 @@
+@use "../base/mixins";
+
+.header {
+    width: 1440rem;
+    height: 100rem;
+    background: #E1EDE6;
+    &__logo {
+        width: 143rem;
+        height: 35rem;
+        position: absolute;
+
+        left: 165rem;
+        top: 33rem;
+    }
+    &__menu {
+        padding: 0rem;
+        gap: 60rem;
+
+        position: absolute;
+        width: 470rem;
+        height: 24rem;
+        right: 165rem;
+        top: 38rem;
+    }
+    &__reproduction {
+        width: 130rem;
+        height: 23rem;
+
+        flex: none;
+        order: 0;
+        flex-grow: 0;
+
+        @include mixins.font('Raleway', 500,  20rem, 23rem);
+    }
+    &__new {
+        width: 84rem;
+        height: 23rem;
+
+        flex: none;
+        order: 0;
+        flex-grow: 0;
+
+        @include mixins.font('Raleway', 500,  20rem, 23rem);
+
+    }
+    &__about_us {
+        width: 54rem;
+        height: 23rem;
+
+        flex: none;
+        order: 0;
+        flex-grow: 0;
+
+        @include mixins.font('Raleway', 500,  20rem, 23rem);
+    }
+    &__cart {
+        width: 22rem;
+        height: 22rem;
+
+        @include mixins.font('Raleway', 500,  20rem, 23rem);
+    }
+
+}
+.menu {
+    @include mixins.flex(row, none, center);
+
+
+    &__element {
+        @include mixins.flex(row, center, center);
+
+        color: #2C2D35;
+    }
+}
+

@@ -1,0 +1,64 @@
+@use "../base/mixins";
+@forward "catalog_el/card";
+@forward "catalog_el/tab";
+
+.catalog {
+    position: relative;
+    // top: 20rem;
+    @include mixins.flex(column, center, flex-start);
+    gap: 30rem;
+
+    position: relative;
+    width: 1110rem;
+    height: 1564rem;
+    left: 165rem;
+
+    &__tabs {
+        @include mixins.flex(row, space-between, flex-start);
+        // gap: 30rem;
+
+        width: 1110rem;
+        height: 44rem;
+        &__span {
+            width: 255rem;
+            height: 44rem;
+
+            color: #2C2D35;
+            @include mixins.font('Raleway', 500, 40rem, 110%);
+        }
+        &__buttons {
+            @include mixins.flex(row, space-between, flex-start);
+            // gap: 32rem;
+
+            width: 428rem;
+            height: 43rem;
+
+            flex: none;
+            order: 1;
+            flex-grow: 0;
+
+        }
+        &__btn {
+            @include mixins.flex(row, center, center);
+
+            flex: none;
+            order: 0;
+            flex-grow: 0;
+        }
+    }
+    &__cards {
+        @include mixins.flex(row, none, flex-start);
+        padding: 0rem;
+        gap: 30rem;
+
+        width: 1110rem;
+        height: 1490rem;
+
+        flex-wrap: wrap;
+        flex: none;
+        order: 1;
+        flex-grow: 0;
+
+    }
+}
+

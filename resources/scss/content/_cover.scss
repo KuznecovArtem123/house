@@ -1,0 +1,57 @@
+@use "../base/mixins";
+
+.cover {
+    width: 1440rem;
+    left: 0rem;
+    top: 100rem;
+    @include mixins.flex(row, center, center);
+    gap: 30rem;
+    &__bird {
+        position: relative;
+        width: 540rem;
+        height: 621rem;
+
+    }
+    &__content {
+        position: relative;
+        width: 540rem;
+        height: 331rem;
+        @include mixins.flex(column, space-between, flex-start);
+        display: flex;
+        gap: 40rem;
+    }
+    &__text {
+        @include mixins.flex(column, none, none);
+        gap: 20rem;
+
+    }
+    &__heading {
+        width: 540rem;
+        height: 132rem;
+
+        @include mixins.font('Raleway', 500,  60rem, 66rem);
+
+        color: #2C2D35;
+
+    }
+    &__span {
+        width: 540rem;
+        height: 54rem;
+        left: 0rem;
+        top: 152rem;
+
+        @include mixins.font('Raleway', 500,  18rem, 150%);
+
+        color: #86928B;
+    }
+    &__button {
+        padding: 20rem 60rem;
+
+        width: 225rem;
+        height: 65rem;
+        left: 0rem;
+        top: 266rem;
+
+    }
+
+}

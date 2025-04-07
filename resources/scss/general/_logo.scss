@@ -1,0 +1,30 @@
+@use "../base/mixins";
+
+.logo {
+    @include mixins.flex(row, none, center);
+    gap: 8rem;
+
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    &__star {
+        display: flex;
+        width: 35rem;
+        height: 35rem;
+
+        flex: none;
+        order: 0;
+        flex-grow: 0;
+    }
+    &__span {
+        width: 100rem;
+        height: 23rem;
+
+        @include mixins.font('Raleway', 700,  20rem, 23rem);
+
+        flex: none;
+        order: 1;
+        flex-grow: 0;
+
+    }
+}
