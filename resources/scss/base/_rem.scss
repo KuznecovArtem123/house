@@ -1,3 +1,13 @@
+@use 'mixins';
+
 html {
-    font-size: calc(1vw / 14.4);
+    @include mixins.laptop{
+        font-size: calc(1vw / 14.4);
+    }
+    @include mixins.tablet{
+        font-size: calc(1vw / 7.68);
+    }
+    @include mixins.phone{
+        font-size: calc(1vw / 5.76);
+    }
 }

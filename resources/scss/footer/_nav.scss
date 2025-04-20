@@ -6,6 +6,18 @@
 
         width: 445rem;
         height: 122rem;
+
+        @include mixins.tablet{
+            width: 445rem;
+            height: 122rem;
+
+        }
+        @include mixins.phone{
+            width: 510rem;
+            height: 113rem;
+
+        }
+
         &_row {
             @include mixins.flex(column, none, flex-start);
             gap: 6rem;

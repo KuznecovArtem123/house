@@ -2,14 +2,31 @@
 
 .cover {
     width: 1440rem;
-    left: 0rem;
-    top: 100rem;
     @include mixins.flex(row, center, center);
     gap: 30rem;
+    @include mixins.tablet{
+        width: 768rem;
+        height: 380rem;
+
+    }
+    @include mixins.phone{
+        width: 510rem;
+        height: 239rem;
+    }
     &__bird {
         position: relative;
         width: 540rem;
         height: 621rem;
+        @include mixins.tablet{
+            width: 330rem;
+            height: 380rem;
+
+        }
+        @include mixins.phone{
+            width: 195rem;
+            height: 239rem;
+
+        }
 
     }
     &__content {
@@ -19,11 +36,22 @@
         @include mixins.flex(column, space-between, flex-start);
         display: flex;
         gap: 40rem;
+        @include mixins.tablet{
+            width: 330rem;
+            height: 308rem;
+        }
+        @include mixins.phone{
+            width: 285rem;
+            height: 239rem;
+            gap: 11rem;
+        }
     }
     &__text {
         @include mixins.flex(column, none, none);
         gap: 20rem;
-
+        @include mixins.phone{
+            gap: 10rem;
+        }
     }
     &__heading {
         width: 540rem;
@@ -32,7 +60,18 @@
         @include mixins.font('Raleway', 500,  60rem, 66rem);
 
         color: #2C2D35;
+        @include mixins.tablet{
+            @include mixins.font('Raleway', 500,  40rem, 100%);
+            width: 330rem;
+            height: 80rem;
 
+        }
+        @include mixins.phone{
+            @include mixins.font('Raleway', 500, 36rem, 100%);
+            width: 285rem;
+            height: 72rem;
+
+        }
     }
     &__span {
         width: 540rem;
@@ -43,15 +82,35 @@
         @include mixins.font('Raleway', 500,  18rem, 150%);
 
         color: #86928B;
+        @include mixins.tablet{
+            @include mixins.font('Raleway', 500,  16rem, 150%);
+            width: 330rem;
+            height: 108rem;
+
+        }
+        @include mixins.phone{
+            width: 285rem;
+            height: 96rem;
+            @include mixins.font('Raleway', 500,  16rem, 150%);
+
+        }
     }
     &__button {
         padding: 20rem 60rem;
 
         width: 225rem;
         height: 65rem;
-        left: 0rem;
-        top: 266rem;
+        @include mixins.tablet{
+            width: 210rem;
+            height: 60rem;
 
+        }
+        @include mixins.phone{
+            width: 178rem;
+            height: 50rem;
+
+
+        }
     }
 
 }

@@ -7,10 +7,34 @@
     width: 1110rem;
     height: 440rem;
     left: 165rem;
+    @include mixins.tablet{
+        left: 0;
+        width: 690rem;
+        height: 825.0001220703125rem;
+        @include mixins.flex(column, space-between, flex-start);
+        gap: 40rem;
+
+    }
+    @include mixins.phone{
+        left: 0;
+        width: 510rem;
+        height: 656rem;
+        @include mixins.flex(column, space-between, flex-start);
+        gap: 30rem;
+
+    }
     &__picture {
         position: relative;
         width: 445rem;
         height: 440rem;
+        @include mixins.tablet{
+            width: 510.0000305175781rem;
+            height: 504.0001525878906rem;
+        }
+        @include mixins.phone{
+            width: 375rem;
+            height: 370rem;
+        }
     }
     &__info {
         @include mixins.flex(column, none, flex-start);
@@ -20,7 +44,13 @@
         width: 635rem;
         height: 272rem;
         bottom: 44rem;
-
+        @include mixins.tablet{
+            top: 0;
+        }
+        @include mixins.phone{
+            top: 0;
+            width:510rem;
+        }
     }
     &__text {
         @include mixins.flex(column, space-between, none);
@@ -31,6 +61,10 @@
         flex: none;
         order: 0;
         flex-grow: 0;
+        @include mixins.phone{
+            width: 510rem;
+
+        }
     }
     &__heading {
         position: relative;
@@ -40,6 +74,9 @@
         @include mixins.font('Raleway', 500, 40rem, 110%);
 
         color: #2C2D35;
+        @include mixins.phone{
+            @include mixins.font('Raleway', 500, 24rem, 110%);
+        }
     }
     &__span {
         position: relative;
@@ -49,6 +86,12 @@
         @include mixins.font('Raleway', 500, 18rem, 150%);
 
         color: #2C2D35;
+        @include mixins.phone{
+            width: 510rem;
+            height: 110rem;
+
+            @include mixins.font('Raleway', 500, 16rem, 110%);
+        }
     }
     &__workers {
         @include mixins.flex(row, none, flex-start);

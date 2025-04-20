@@ -3,6 +3,7 @@
                 <img src="{{asset('img/star.png')}}" class="header__star logo__star"></img>
                 <span class="header__span span-green logo__span">Ink. House</span>
             </div>
+            <div class="header__line"></div>
             <div class="header__menu menu">
                 <a href="" class="menu__element header__reproduction">Репродукции</a>
                 <a href="" class="menu__element header__new">Новинки</a>

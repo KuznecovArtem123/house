@@ -1,22 +1,24 @@
 @use "../../base/mixins";
 
-// @include mixins.flex(column, center, center);
-// @include mixins.font('Raleway', 500, 30rem, 35rem);
+
 .card {
     padding: 25rem 20rem;
     width: 350rem;
     height: 730rem;
     background: #E1EDE6;
-    // gap: 10rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    @include mixins.flex(column, space-between, none);
 
-    // flex: none;
-    // order: 0;
-    // flex-grow: 0;
+    @include mixins.tablet{
+        width: 330rem;
+        height: 730rem;
 
-    // @include mixins.flex(column, flex-start, flex-start);
+    }
+    @include mixins.phone{
+        width: 240rem;
+        height: 514rem;
+    }
+
+
     &__info {
         @include mixins.flex(column, flex-start, flex-start);
         gap: 10rem;
@@ -29,7 +31,11 @@
     }
     &__img {
         height: 422rem;
+        @include mixins.phone{
+            height: 250rem;
+            width: 250rem;
 
+        }
     }
     &__author {
         width: 140rem;
@@ -37,6 +43,12 @@
         color: #86928B;
 
         @include mixins.font('Raleway', 500, 18rem, 21rem);
+
+        @include mixins.phone{
+            @include mixins.font('Raleway', 500, 16rem, 100%);
+            width: 117rem;
+            height: 19rem;
+        }
     }
     &__name {
         width: 310rem;
@@ -44,12 +56,24 @@
         color: #2C2D35;
 
         @include mixins.font('Raleway', 500, 30rem, 35rem);
+
+        @include mixins.phone{
+            @include mixins.font('Raleway', 500, 24rem, 100%);
+            width: 200rem;
+            height: 28rem;
+        }
     }
     &__property {
         height: 21rem;
         color: #2C2D35;
 
         @include mixins.font('Raleway', 500, 18rem, 21rem);
+
+        @include mixins.phone{
+            @include mixins.font('Raleway', 500, 16rem, 100%);
+            width: 200rem;
+            height: 19rem;
+        }
     }
     &__cost {
         width: 127rem;
@@ -57,10 +81,19 @@
         color: #598D66;
 
         @include mixins.font('Raleway', 500, 24rem, 28rem);
+
+        @include mixins.phone{
+            @include mixins.font('Raleway', 500, 20rem, 100%);
+            width: 106rem;
+            height: 23rem;
+        }
     }
     &__button {
         align-self: stretch;
         padding: 20rem 60rem;
+        @include mixins.phone{
+
+        }
 
     }
 }

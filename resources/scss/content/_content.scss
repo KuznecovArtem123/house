@@ -2,7 +2,11 @@
 @forward "cover";
 @forward "promo";
 @forward "team";
+@use "../base/mixins";
 
 .content__element {
     margin-bottom: 70rem;
+    @include mixins.phone{
+        margin-top: 50rem;
+    }
 }

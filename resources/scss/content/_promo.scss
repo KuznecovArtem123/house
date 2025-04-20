@@ -7,10 +7,25 @@
 
     @include mixins.flex(column, center, center);
 
+    @include mixins.tablet{
+        width: 768rem;
+        height: 502rem;
+    }
+    @include mixins.phone{
+        width: 576rem;
+        height: 410rem;
+    }
+
     &__background {
         width: 1440rem;
         position: absolute;
         z-index: -100;
+        @include mixins.tablet{
+            height: 502rem;
+        }
+        @include mixins.phone{
+            height: 410rem;
+        }
     }
     &__info {
         width: 540rem;
@@ -19,11 +34,24 @@
         display: flex;
         gap: 60rem;
         flex-direction: column;
+        @include mixins.tablet{
+            right: 0rem;
+            width: 690rem;
+        }
+        @include mixins.phone{
+            right: 0rem;
+            width: 510rem;
+            gap: 20rem;
+        }
     }
     &__text {
         display: flex;
         flex-direction: column;
         gap: 20rem;
+        @include mixins.phone{
+            gap: 0rem;
+        }
+
     }
     &__star {
         box-sizing: border-box;
@@ -33,6 +61,14 @@
         flex: none;
         order: 0;
         flex-grow: 0;
+        @include mixins.tablet{
+            width: 60rem;
+            height: 60rem;
+        }
+        @include mixins.phone{
+            width: 50rem;
+            height: 50rem;
+        }
     }
     &__heading {
         @include mixins.flex(row, none, center);
@@ -50,6 +86,19 @@
             flex-grow: 0;
 
             @include mixins.font('Raleway', 500, 40rem, 100%);
+
+            @include mixins.tablet{
+                @include mixins.font('Raleway', 500, 30rem, 100%);
+                width: 370rem;
+                height: 60rem;
+
+            }
+            @include mixins.phone{
+                @include mixins.font('Raleway', 500, 24rem, 100%);
+                width: 261rem;
+                height: 48rem;
+
+            }
         }
     }
     &__span {
@@ -60,6 +109,19 @@
         @include mixins.font('Raleway', 500, 18rem, 27rem);
 
         color: #FFFFFF;
+
+        @include mixins.tablet{
+            @include mixins.font('Raleway', 500, 18rem, 150%);
+            width: 690rem;
+            height: 182rem;
+        }
+        @include mixins.phone{
+            @include mixins.font('Raleway', 500, 16rem, 140%);
+            width: 510rem;
+            height: 170rem;
+
+
+        }
     }
     &__button {
         @include mixins.flex(row, center, center);
@@ -67,6 +129,10 @@
 
         width: 257rem;
         height: 65rem;
+        @include mixins.phone{
+            width: 190rem;
+            height: 50rem;
+        }
     }
 
 }

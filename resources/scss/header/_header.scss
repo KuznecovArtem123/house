@@ -4,23 +4,70 @@
     width: 1440rem;
     height: 100rem;
     background: #E1EDE6;
+    display: flex;
+    flex-direction: row;
+    @include mixins.tablet{
+        width: 768rem;
+        height: 100rem;
+    }
+    @include mixins.phone{
+        flex-direction: column;
+        align-items: center;
+        width: 576rem;
+        height: 123rem;
+
+    }
     &__logo {
         width: 143rem;
         height: 35rem;
-        position: absolute;
+        position: relative;
 
         left: 165rem;
         top: 33rem;
+        @include mixins.tablet{
+            left: 39rem;
+        }
+        @include mixins.phone{
+            left: 0;
+            top: 16rem;
+        }
     }
     &__menu {
         padding: 0rem;
         gap: 60rem;
 
-        position: absolute;
+        position: relative;
         width: 470rem;
         height: 24rem;
-        right: 165rem;
+        left: 662rem;
         top: 38rem;
+        @include mixins.tablet{
+            left: 102rem;
+            width: 445rem;
+
+        }
+        @include mixins.phone{
+            left: 0;
+            top: 32rem;
+            display: flex;
+            flex-direction: row;
+        }
+    }
+    &__line {
+        @include mixins.laptop{
+            display: none;
+        }
+        @include mixins.tablet{
+            display: none;
+        }
+        @include mixins.phone{
+            display: flex;
+            height: 1rem;
+            width: 510rem;
+            background-color: #C3D1C6;
+            position: relative;
+            top: 16rem;
+        }
     }
     &__reproduction {
         width: 130rem;
@@ -67,7 +114,6 @@
 
     &__element {
         @include mixins.flex(row, center, center);
-
         color: #2C2D35;
     }
 }

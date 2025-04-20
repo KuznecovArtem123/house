@@ -6,6 +6,10 @@
     gap: 6rem;
     &__span {
         @include mixins.font('Raleway', 500,  20rem, 23rem);
+        flex: none;
+        @include mixins.phone{
+            @include mixins.font('Raleway', 500,  18rem, 100%);
+        }
     }
 
     &-green{

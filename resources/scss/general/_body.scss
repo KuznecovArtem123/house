@@ -1,5 +1,11 @@
 @use "../base/mixins";
 
 body {
-
+    background-color: #F4F6F5;
+    @include mixins.tablet{
+        @include mixins.flex(column, center, center);
+    }
+    @include mixins.phone{
+        @include mixins.flex(column, center, center);
+    }
 }
