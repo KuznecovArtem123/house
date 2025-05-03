@@ -38,7 +38,7 @@
         }
     }
     &__author {
-        width: 140rem;
+        width: 170rem;
         height: 21rem;
         color: #86928B;
 
@@ -46,7 +46,7 @@
 
         @include mixins.phone{
             @include mixins.font('Raleway', 500, 16rem, 100%);
-            width: 117rem;
+            width: 150rem;
             height: 19rem;
         }
     }

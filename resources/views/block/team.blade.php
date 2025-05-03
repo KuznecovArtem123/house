@@ -1,4 +1,4 @@
-<div class="team content__element">
+<div class="team content__element" id="about">
     <img src="{{asset('img/team/picture.png')}}" alt="" class="team__picture">
     <div class="team__info">
         <div class="team__text">

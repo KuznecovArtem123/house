@@ -10,20 +10,19 @@
     background: #D4E8D9;
     border-radius: 20rem;
 
-    // flex: none;
-    // order: 0;
-    // flex-grow: 0;
-
     &__span {
         width: 86rem;
         height: 23rem;
 
-        font-family: 'Raleway';
-        font-style: normal;
-        font-weight: 500;
-        font-size: 20rem;
-        line-height: 23rem;
+        @include mixins.font('Raleway', 500, 20rem, 23rem);
 
         color: #2C2D35;
+    }
+    &-toggled {
+        background: #376B44;
+
+        &__span {
+            color: #F4F6F5;
+        }
     }
 }

@@ -1,4 +1,4 @@
-<div class="promo content__element">
+<div class="promo content__element" id="promo">
     <img src="{{asset('img/promo/background.png')}}" alt="" class="promo__background">
     <div class="promo__info">
         <div class="promo__text">
