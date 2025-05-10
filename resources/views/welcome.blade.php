@@ -14,11 +14,10 @@
         <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
         <!-- Styles / Scripts -->
         @vite(['resources/scss/app.scss', 'resources/js/app.js'])
-        <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.8.2/dist/alpine.min.js" defer></script>
+        <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
 
     </head>
     <body>
-
         @include("block.header")
         @include("block.cover")
         @include("block.catalog")

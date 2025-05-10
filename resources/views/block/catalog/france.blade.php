@@ -1,4 +1,4 @@
-<div class="catalog__cards">
+<div class="catalog__cards" >
     <x-catalog.card class="catalog__card" src="{{asset('img/catalog/france/card-1.jpg')}}" author="Марсель Руссо" name="Охота Амура" property="Холст, масло (50х80)" cost="14 500 руб"/>
     <x-catalog.card class="catalog__card" src="{{asset('img/catalog/france/card-2.jpg')}}" author="Анри Селин" name="Дама с собачкой" property="Акрил, бумага (50х80)" cost="16 500 руб"/>
     <x-catalog.card class="catalog__card" src="{{asset('img/catalog/france/card-3.jpg')}}" author="Франсуа Дюпон" name="Процедура" property="Цветная литография (40х60)" cost="20 000 руб"/>
